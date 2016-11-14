@@ -7,6 +7,16 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
 });
+
+// Simliar to this route map if we were using vue
+// routes = [
+//   {
+//     name: 'login',
+//     path: '/login',
+//     component: require('./login/component.vue')
+//   }
+// ]
 
 export default Router;
