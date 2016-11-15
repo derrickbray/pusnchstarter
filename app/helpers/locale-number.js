@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
 export function localeNumber(params/*, hash*/) {
-  return params[0].toLocaleString();
+  const num = parseInt(params[0]);
+
+  if (!isNaN(num)) {
+    return num.toLocaleString();
+  }
+
+  return '0';
 }
 
 export default Ember.Helper.helper(localeNumber);

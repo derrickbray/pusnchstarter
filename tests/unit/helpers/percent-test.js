@@ -6,7 +6,10 @@ module('Unit | Helper | percent');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  let result = percent([42]);
-  assert.ok(result);
-});
+  assert.equal(percent([5, 100]), 5);
+  assert.equal(percent([4, 10]), 40);
+  assert.equal(percent([2, 5]), 40);
 
+  // It still works for strings
+  assert.equal(percent(['2', 5]), 40);
+});
