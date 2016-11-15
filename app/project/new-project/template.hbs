@@ -1,3 +1,19 @@
 {{outlet}}
-<h1>hello new project</h1>
-{{#link-to "project"}}Back{{/link-to}}
+<div class="container">
+  <h1>Make a New Project</h1>
+  <form {{action "saveForm" name goal description on="submit"}}>
+    {{!-- <h2>Name:{{name}}</h2> --}}
+    <p>
+      {{input type="text" placeholder="Name" value=name}}
+    </p>
+    {{!-- <h2>Goal:{{goal}}</h2> --}}
+    <p>
+      {{input type="text" placeholder="Goal" value=goal}}
+    </p>
+    <p>
+      {{textarea placeholder="Description" rows="8" cols="40" value=description}}
+    </p>
+    {{#link-to "project"}}Back{{/link-to}}
+    <button type="submit" name="button">Save</button>
+  </form>
+  </div>
